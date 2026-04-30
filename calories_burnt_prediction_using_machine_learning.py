@@ -22,7 +22,7 @@ from sklearn.ensemble import RandomForestRegressor
 import warnings
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv('exercise.csv')
+df = pd.read_csv('/content/exercise.csv')
 df.head()
 
 df.shape
@@ -37,7 +37,7 @@ plt.show()
 features = ['Age', 'Height', 'Weight', 'Duration']
 
 # Load calories data and merge with df
-calories_df = pd.read_csv('calories.csv')
+calories_df = pd.read_csv('/content/calories.csv')
 df_merged = pd.merge(df, calories_df, on='User_ID', how='left')
 
 plt.subplots(figsize=(15, 10))
